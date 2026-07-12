@@ -1,0 +1,25 @@
+{
+  "project": "Principalities",
+  "version": "0.4.0",
+  "description": "First-person spiritual warfare shooter. Stronghold: W 34th Street.",
+  "palette": {
+    "hero_blue": "#2B5CD9", "hero_blue_dark": "#1E43A0",
+    "gold": "#E8B62A", "oxblood": "#7A2430",
+    "enemy_crimson": "#E23232", "boss_glow": "#D4537E"
+  },
+  "assets": [
+    {"name":"hero_fullbody","type":"concept","tags":["hero","reference"],"path":"assets/raw/hero/","frames":5,"status":"raw"},
+    {"name":"vm_gun","type":"viewmodel","tags":["hero","pov","pistol"],"states":["aim","fire","recoil","reload"],"status":"in-game"},
+    {"name":"vm_fists","type":"viewmodel","tags":["hero","pov","melee"],"states":["rest","jabL","jabR"],"status":"in-game"},
+    {"name":"enemy_shade","type":"sprite","tags":["enemy","tier1"],"states":["idle","attack","hurt","death"],"hp":1,"status":"in-game"},
+    {"name":"enemy_power","type":"sprite","tags":["enemy","tier2"],"states":["idle","attack","hurt","death"],"hp":3,"status":"in-game"},
+    {"name":"enemy_principality","type":"sprite","tags":["enemy","boss"],"states":["idle"],"needed":["summon","strike","hurt","defeat"],"hp":34,"status":"partial"},
+    {"name":"item_bible","type":"item","tags":["pickup","faith"],"states":["idle","open","pickup","spent"],"effect":"faith restore + 6s invulnerability","status":"in-game"},
+    {"name":"item_holywater","type":"item","tags":["throwable","cleanse"],"states":["base","burst1","burst2","empty"],"effect":"AoE 3 dmg, destroys orbs","status":"in-game"},
+    {"name":"item_blessedoil","type":"item","tags":["pickup","buff"],"states":["pickup","pouring","empty"],"effect":"15s double damage","status":"in-game"},
+    {"name":"env_stronghold_w34","type":"environment","tags":["stronghold","street"],"states":["contested"],"needed":["normal","consumed","redeemed"],"status":"partial"},
+    {"name":"weapon_lightpistol","type":"concept","tags":["weapon","reference"],"status":"in-game"},
+    {"name":"companion_ophanim","type":"sprite","tags":["ally","drone"],"needed":["idle","scan","alert","damaged","dormant"],"status":"planned"},
+    {"name":"armor_of_god","type":"equipment","tags":["progression"],"pieces":["belt","breastplate","shoes","shield","helmet","sword"],"styles":["ancient","tech"],"status":"planned"}
+  ]
+}
